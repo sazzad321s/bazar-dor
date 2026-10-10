@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Hind_Siliguri } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Marquee from "@/components/Marquee";
 
 const hindSiliguri = Hind_Siliguri({
   subsets: ["latin","bengali"],
@@ -21,7 +23,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${hindSiliguri.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-white">
+        <Header />
+        <Marquee />
+        <main className="max-w-325 lg:mx-auto sm:mx-2">
+        {children}
+        </main>
+        </body>
     </html>
   );
 }
