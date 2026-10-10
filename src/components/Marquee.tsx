@@ -2,10 +2,9 @@ import React from 'react';
 import MarqueeText from "react-marquee-text"
 import "react-marquee-text/dist/styles.css"
 import {bn, bnUnit} from "@/lib/utils"
-import Link from 'next/link';
 import { TrendingUp, TrendingDown } from 'lucide-react';
 
-interface Iallproduct {
+export interface Iallproduct {
     "id": number,
     "slug": string,
     "nameBn": string,
@@ -47,7 +46,7 @@ const Marquee = async() => {
  
     
     return (
-      <div className="w-full overflow-hidden border-y border-gray-200 bg-white">
+      <div className="w-full overflow-hidden border-y border-gray-200 bg-white sticky top-0 z-100">
     <MarqueeText
       className="py-2"
       direction="right"
