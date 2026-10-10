@@ -1,7 +1,5 @@
 import React from 'react';
 import { Iallproduct } from './Marquee';
-import { Divide } from 'lucide-react';
-import Image from 'next/image';
 import { bn, bnUnit } from '@/lib/utils';
 
 const AllProducts = async() => {

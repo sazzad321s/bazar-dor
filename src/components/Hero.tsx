@@ -1,5 +1,6 @@
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const date = new Date().toLocaleDateString('bn-BD', {
@@ -25,10 +26,11 @@ const Hero = () => {
           বাজারদরের নির্ভরযোগ্য, সহজ ও সর্বশেষ তথ্য।
           বাজারের প্রতিদিনের পরিস্থিতি জানুন এক জায়গায়।
         </p>
-
+         <Link href="#allproducts">
         <button className="mt-6 rounded-lg bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-emerald-900/20 transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-800 hover:shadow-lg">
           সব পণ্য দেখুন
         </button>
+        </Link>
       </div>
 
       {/* Right Illustration */}
