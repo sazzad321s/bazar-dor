@@ -20,7 +20,14 @@ export interface Iallproduct {
     "change": {
       "dir": string,
       "pct": number
-    }
+    },
+    "markets": 
+    {
+      "market": string,
+      "division": string,
+      "min": string,
+      "max": string
+    }[]
 }
 
 const headLine = async() => {
