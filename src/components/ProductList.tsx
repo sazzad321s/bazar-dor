@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Iallproduct } from './Marquee';
 import { bn, bnUnit } from '@/lib/utils';
+import Link from 'next/link';
 
 const ProductList = ({products}:{products: Iallproduct[]}) => {
 
@@ -43,7 +44,7 @@ const ProductList = ({products}:{products: Iallproduct[]}) => {
             {/* Products Card */}
                           <div  className="rounded-xl grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
             {
-                productsSort.map((p) =>  (
+                productsSort.map((p) =>  ( <Link key={p.id} href={`/product/${p.id}`}>
                                   <div
                                     key={p.id}
                                     className="flex flex-col gap-2 p-4 bg-[#FAFCFA] rounded-lg"
@@ -89,6 +90,7 @@ const ProductList = ({products}:{products: Iallproduct[]}) => {
                                       </div>
                                     </div>
                                   </div>
+                                  </Link>
                                 )
                     
                 )

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Iallproduct } from './Marquee';
 import { bn, bnUnit } from '@/lib/utils';
+import Link from 'next/link';
 
 const AllProducts = async () => {
   const res = await fetch(
@@ -37,7 +38,7 @@ const SectionB = async () => {
       </h2>
 
       <div className="rounded-xl grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
-        {topSixProducts.map((p) => (
+        {topSixProducts.map((p) => ( <Link key={p.id} href={`/product/${p.id}`}>
           <div
             key={p.id}
             className="flex flex-col gap-2 p-4 bg-[#FAFCFA] rounded-lg"
@@ -77,6 +78,7 @@ const SectionB = async () => {
               </div>
             </div>
           </div>
+          </Link>
         ))}
       </div>
     </div>
