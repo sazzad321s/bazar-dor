@@ -1,0 +1,58 @@
+import React from 'react';
+import { Code2 } from 'lucide-react';
+import Link from 'next/link';
+
+
+const SignUpPage = () => {
+    return (
+        <div className='flex flex-col mt-5 items-center'>
+            <h2 className='font-bold text-2xl'>অ্যাকাউন্ট তৈরি করুন</h2>
+            <p className='text-gray-500 text-sm my-2'>বিনা খরচে সাইন আপ করে সব বিস্তারিত দাম দেখুন।</p>
+            <fieldset className="fieldset bg-[#FAFCFA] border-base-300 rounded-box w-[340] border p-4">
+             
+
+             <label className="label">নাম</label>
+             <input type="text" className="input" placeholder="যেমন: রহিম উদ্দিন" />
+
+             <label className="label">ইমেইল</label>
+             <input type="email" className="input" placeholder="you@example.com" />
+
+             <label className="label">পাসওয়ার্ড</label>
+             <input type="password" className="input" placeholder="কমপক্ষে ৮ অক্ষর" />
+
+             <label className="label">পাসওয়ার্ড নিশ্চিত করুন</label>
+             <input type="password" className="input" placeholder="আবার লিখুন" />
+
+             <button type='submit' className="btn bg-green-700 hover:bg-green-800 text-white font-semibold rounded-md mt-4">অ্যাকাউন্ট তৈরি করুন</button>
+
+             <div className="my-2 flex items-center gap-3">
+            <div className="h-px flex-1 bg-gray-200" />
+            <span className="text-xs text-gray-500">অথবা</span>
+            <div className="h-px flex-1 bg-gray-200" />
+          </div>
+
+          <div className="grid grid-cols-2 gap-2">
+            <button
+              type="button"
+              className="btn btn-outline px-2 text-xs"
+            >
+              <span className="font-bold text-base text-[#4285F4]">G</span>
+              Google দিয়ে চালিয়ে যান
+            </button>
+
+            <button
+              type="button"
+              className="btn btn-outline px-2 text-xs"
+            >
+              <Code2 size={16} />
+              GitHub দিয়ে চালিয়ে যান
+            </button>
+            </div>
+             <div className='text-center mt-0.5 text-gray-500 text-sm'><span className='font-semibold text-black'>অ্যাকাউন্ট আছে?</span><Link href='/sign-in'> সাইন ইন করুন</Link></div>
+            </fieldset>
+            <div className='text-center mt-3 text-gray-500 text-sm'><Link href='/'>← হোম পেজে ফিরে যান</Link></div>
+        </div>
+    );
+};
+
+export default SignUpPage;
