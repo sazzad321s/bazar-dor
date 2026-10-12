@@ -41,7 +41,7 @@ const SectionB = async () => {
         {topSixProducts.map((p) => ( <Link key={p.id} href={`/product/${p.id}`}>
           <div
             key={p.id}
-            className="flex flex-col gap-2 p-4 bg-[#FAFCFA] rounded-lg"
+            className="flex flex-col gap-2 p-4 bg-[#FAFCFA] rounded-lg  hover:border-3 hover:border-green-700"
           >
             {/* image and name */}
             <div className="flex items-center gap-1">

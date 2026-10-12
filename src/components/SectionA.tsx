@@ -31,7 +31,7 @@ const SectionA = async() => {
             <div className=' rounded-xl grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 '>
                 {
                    topSixProducts.map((p) => <Link key={p.id} href={`/product/${p.id}`}>
-                    <div key={p.id} className='flex flex-col gap-2 p-4 bg-[#FAFCFA] rounded-lg'>
+                    <div key={p.id} className='flex flex-col gap-2 p-4 bg-[#FAFCFA] rounded-lg hover:border-3 hover:border-green-700'>
                         {/* image and name */}
                         <div className='flex items-center gap-1'>
                             <div className='border border-[#F0F5F0] rounded-md text-3xl'>{p.image}</div>
