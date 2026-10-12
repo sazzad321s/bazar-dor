@@ -35,19 +35,30 @@ const SignUpPage = () => {
        }
    }
 
-   const handleGoogleSignIn = async() => {
-           await authClient.signIn.social({
-               provider: "google",
-               callbackURL: "/"
-           })
-      }
+    const handleGoogleSignIn = async() => {
+        const {error} = await authClient.signIn.social({
+            provider: "google",
+            callbackURL: "/"
+        })
+         if (error) {
+    toast.error("সাইন ইন ব্যর্থ হয়েছে!");
+  } else {
+    toast.success("সাইন ইন সফল হয়েছে!");
+  }
+
+   }
    
-      const handleGithubSignIn = async() => {
-           await authClient.signIn.social({
-               provider: "github",
-               callbackURL: "/"
-           })
-      }
+        const handleGithubSignIn = async() => {
+       const {error} = await authClient.signIn.social({
+            provider: "github",
+            callbackURL: "/"
+        })
+        if (error) {
+    toast.error("সাইন ইন ব্যর্থ হয়েছে!");
+  } else {
+    toast.success("সাইন ইন সফল হয়েছে!");
+  }
+   }
 
     return (
         <div className='flex flex-col mt-5 items-center'>

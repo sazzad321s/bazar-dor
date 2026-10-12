@@ -32,17 +32,28 @@ const SignInPage = () => {
    }
 
    const handleGoogleSignIn = async() => {
-        await authClient.signIn.social({
+        const {error} = await authClient.signIn.social({
             provider: "google",
             callbackURL: "/"
         })
+         if (error) {
+    toast.error("সাইন ইন ব্যর্থ হয়েছে!");
+  } else {
+    toast.success("সাইন ইন সফল হয়েছে!");
+  }
+
    }
 
    const handleGithubSignIn = async() => {
-        await authClient.signIn.social({
+       const {error} = await authClient.signIn.social({
             provider: "github",
             callbackURL: "/"
         })
+        if (error) {
+    toast.error("সাইন ইন ব্যর্থ হয়েছে!");
+  } else {
+    toast.success("সাইন ইন সফল হয়েছে!");
+  }
    }
 
 
