@@ -64,7 +64,7 @@ const Marquee = async() => {
           key={product.id}
           className="flex shrink-0 items-center gap-1.5 whitespace-nowrap border-r border-gray-200 px-4 text-sm"
         >
-          <span>{product.categoryIcon}</span>
+          <span>{product.image}</span>
 
           <span className="font-medium text-gray-800">
             {product.nameBn}
