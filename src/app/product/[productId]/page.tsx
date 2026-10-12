@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import LoadingPage from '@/app/loading';
 import SingleProduct from '@/components/SingleProduct';

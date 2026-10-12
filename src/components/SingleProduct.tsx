@@ -1,6 +1,7 @@
 import React from 'react';
 import { Iallproduct } from '@/components/Marquee';
 import { bn, bnUnit } from '@/lib/utils';
+import { notFound } from 'next/navigation';
 
 const SingleProduct = async ({
   params,
@@ -16,11 +17,15 @@ const SingleProduct = async ({
     }
   );
 
-  if (!res.ok) {
-    throw new Error('Data fetching failed');
-  }
+  
 
   const product: Iallproduct = await res.json();
+
+ if (!product || !product.id) {
+  notFound();
+}
+
+
 
   return (
     <div className="mt-5 mb-14 lg:w-325 md:w-225 sm:125">

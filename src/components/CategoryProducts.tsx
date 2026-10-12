@@ -3,6 +3,7 @@ import React from 'react';
 import { Iallproduct } from './Marquee';
 import { bn } from '@/lib/utils';
 import ProductList from './ProductList';
+import { notFound } from 'next/navigation';
 
 const CategoryProducts = async({params} : {params: Promise<{categoryId: string}>}) => {
 
@@ -17,6 +18,10 @@ const CategoryProducts = async({params} : {params: Promise<{categoryId: string}>
   }
 
   const data: Iallproduct[] = await res.json();
+
+  if (data.length === 0) {
+  notFound();
+}
   console.log(data);
 
     return (

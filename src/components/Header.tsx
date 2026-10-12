@@ -15,8 +15,8 @@ const Header = () => {
 
     return (
       
-<header className=" border-b border-gray-200 bg-white">
-  <nav className="mx-auto flex max-w-325 items-center justify-between px-4 py-3 ">
+<header className=" border-b border-gray-200 bg-white w-full">
+  <nav className="mx-auto flex  max-w-325 items-center justify-between px-4 py-3">
    
     {/* Logo and Brand */}
     <Link href='/'>
