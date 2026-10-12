@@ -9,7 +9,7 @@ const date = new Date().toLocaleDateString('bn-BD', {
 
 const Hero = () => {
   return (
-    <div className="relative my-5 flex min-h-65 flex-col items-center justify-between overflow-hidden rounded-2xl border border-emerald-100 bg-[#f8fbf8] px-5 py-5 sm:px-8 sm:py-8 md:min-h-75 md:flex-row md:px-10 lg:px-12 lg:w-325 mx-2">
+    <div className="relative my-5 flex min-h-65 flex-col items-center justify-between overflow-hidden rounded-2xl border border-emerald-100 bg-[#f8fbf8] px-5 py-5 sm:px-8 sm:py-8 md:min-h-75 md:flex-row md:px-10 lg:px-12 lg:max-w-325 mx-2">
 
       {/* Left Content */}
       <div className="z-10 w-full md:w-[68%]">

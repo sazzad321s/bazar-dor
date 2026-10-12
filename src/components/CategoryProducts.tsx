@@ -26,7 +26,7 @@ const CategoryProducts = async({params} : {params: Promise<{categoryId: string}>
 
     return (
         <div className='mt-10'>
-            <div className='flex items-center gap-1 lg:w-325 md:225 sm:125 border-base-300 bg-[#FAFCFA] py-6 px-2 rounded-xl'>
+            <div className='flex items-center gap-1 lg:w-225 md:225 sm:125 border-base-300 bg-[#FAFCFA] py-6 px-2 rounded-xl'>
                 <div className='border border-[#F0F5F0] rounded-md text-5xl'>{data[0].categoryIcon}</div>
                 <div>
                     <h2 className='font-bold text-xl'>{data[0].categoryNameBn}</h2>

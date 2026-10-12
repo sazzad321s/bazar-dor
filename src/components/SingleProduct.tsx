@@ -28,7 +28,7 @@ const SingleProduct = async ({
 
 
   return (
-    <div className="mt-5 mb-14 lg:w-325 md:w-225 sm:125">
+    <div className="mt-5 mb-14 lg:w-225 md:max-w-225 sm:125">
       {/* Product Header */}
       <div className="flex items-center justify-between gap-3 bg-[#FAFCFA] border border-[#E6EEE6] rounded-xl p-4 md:p-5">
         <div className="flex items-center gap-3 min-w-0">
