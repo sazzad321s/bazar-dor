@@ -31,6 +31,20 @@ const SignInPage = () => {
        }
    }
 
+   const handleGoogleSignIn = async() => {
+        await authClient.signIn.social({
+            provider: "google",
+            callbackURL: "/"
+        })
+   }
+
+   const handleGithubSignIn = async() => {
+        await authClient.signIn.social({
+            provider: "github",
+            callbackURL: "/"
+        })
+   }
+
 
     return (
         <div className='flex flex-col mt-5 items-center'>
@@ -59,7 +73,8 @@ const SignInPage = () => {
           <div className="grid grid-cols-2 gap-2">
             <button
               type="button"
-              className="btn btn-outline px-2 text-xs"
+              className="btn btn-outline px-2 text-xs border-green-700"
+              onClick={handleGoogleSignIn}
             >
               <span className="font-bold text-base text-[#4285F4]">G</span>
               Google দিয়ে চালিয়ে যান
@@ -67,16 +82,17 @@ const SignInPage = () => {
 
             <button
               type="button"
-              className="btn btn-outline px-2 text-xs"
+              className="btn btn-outline px-2 text-xs border-green-700"
+              onClick={handleGithubSignIn}
             >
               <Code2 size={16} />
               GitHub দিয়ে চালিয়ে যান
             </button>
             </div>
-             <div className='text-center mt-0.5 text-gray-500 text-sm'><span className='font-semibold text-black'>অ্যাকাউন্ট নেই?</span><Link href='/sign-up'> সাইন আপ করুন</Link></div>
+             <div className='text-center mt-0.5 text-gray-500 text-sm'><span className='font-semibold text-black'>অ্যাকাউন্ট নেই?</span><Link href='/sign-up' className='underline decoration-green-600 text-green-600'> সাইন আপ করুন</Link></div>
             </fieldset>
             </form>
-            <div className='text-center mt-3 text-gray-500 text-sm'><Link href='/'>← হোম পেজে ফিরে যান</Link></div>
+            <div className='text-center mt-3 text-gray-500  text-sm'><Link href='/' className='underline decoration-gray-500'>← হোম পেজে ফিরে যান</Link></div>
         </div>
     );
 };

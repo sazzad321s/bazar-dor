@@ -16,6 +16,31 @@ const nextConfig: NextConfig = {
       },
     },
   },
+   images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ichef.bbci.co.uk"
+      },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com"
+      },
+      {
+        protocol: "https",
+        hostname: "avatarfiles.alphacoders.com"
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com"
+      },
+      {
+        protocol: "https",
+        hostname:"avatars.githubusercontent.com"
+      }
+
+    ]
+  }
 };
 
 export default nextConfig;

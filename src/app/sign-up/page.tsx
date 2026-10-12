@@ -35,6 +35,20 @@ const SignUpPage = () => {
        }
    }
 
+   const handleGoogleSignIn = async() => {
+           await authClient.signIn.social({
+               provider: "google",
+               callbackURL: "/"
+           })
+      }
+   
+      const handleGithubSignIn = async() => {
+           await authClient.signIn.social({
+               provider: "github",
+               callbackURL: "/"
+           })
+      }
+
     return (
         <div className='flex flex-col mt-5 items-center'>
             <h2 className='font-bold text-2xl'>অ্যাকাউন্ট তৈরি করুন</h2>
@@ -67,6 +81,7 @@ const SignUpPage = () => {
             <button
               type="button"
               className="btn btn-outline px-2 text-xs"
+              onClick={handleGoogleSignIn}
             >
               <span className="font-bold text-base text-[#4285F4]">G</span>
               Google দিয়ে চালিয়ে যান
@@ -75,12 +90,13 @@ const SignUpPage = () => {
             <button
               type="button"
               className="btn btn-outline px-2 text-xs"
+              onClick={handleGithubSignIn}
             >
               <Code2 size={16} />
               GitHub দিয়ে চালিয়ে যান
             </button>
             </div>
-             <div className='text-center mt-0.5 text-gray-500 text-sm'><span className='font-semibold text-black'>অ্যাকাউন্ট আছে?</span><Link href='/sign-in'> সাইন ইন করুন</Link></div>
+             <div className='text-center mt-0.5 text-gray-500 text-sm'><span className='font-semibold text-black'>অ্যাকাউন্ট আছে?</span><Link href='/sign-in' className='underline decoration-green-600 text-green-600'> সাইন ইন করুন</Link></div>
             </fieldset>
             </form>
             <div className='text-center mt-3 text-gray-500 text-sm'><Link href='/'>← হোম পেজে ফিরে যান</Link></div>
